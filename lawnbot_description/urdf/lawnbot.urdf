@@ -16,6 +16,13 @@
         <box size="0.8 0.4 0.3"/>
       </geometry>
     </collision>
+    <inertial>
+      <mass value="45"/>
+      <inertia
+        ixx="2.7375"  ixy="0.0" ixz="0.0"
+                      iyy="3.0" iyz="0.0"
+                                izz="0.9375"/>
+    </inertial>
   </link>
 
 <!--
@@ -33,6 +40,13 @@
         <cylinder length="0.075" radius="0.125"/>
       </geometry>
     </collision>
+    <inertial>
+      <mass value="1.1"/>
+      <inertia
+        ixx="0.0048125" ixy="0.0"       ixz="0.0"
+                        iyy="0.0048125" iyz="0.0"
+                                        izz="0.00859375"/>
+    </inertial>
   </link>
 
   <joint name="base_to_wheel_br" type="continuous">
@@ -57,6 +71,13 @@
         <cylinder length="0.075" radius="0.125"/>
       </geometry>
     </collision>
+    <inertial>
+      <mass value="1.1"/>
+      <inertia
+        ixx="0.0048125" ixy="0.0"       ixz="0.0"
+                        iyy="0.0048125" iyz="0.0"
+                                        izz="0.00859375"/>
+    </inertial>
   </link>
 
   <joint name="base_to_wheel_bl" type="continuous">
@@ -81,6 +102,13 @@
         <sphere radius="0.125"/>
       </geometry>
     </collision>
+    <inertial>
+      <mass value="2.2"/>
+      <inertia
+        ixx="0.01375" ixy="0.0"     ixz="0.0"
+                      iyy="0.01375" iyz="0.0"
+                                    izz="0.01375"/>
+    </inertial>
   </link>
 
   <joint name="base_to_caster_front" type="fixed">
