@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<robot name="lawnbot">
+
+  <!--
+      ROBOT BASE
+  -->
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.8 0.4 0.3"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.8 0.4 0.3"/>
+      </geometry>
+    </collision>
+  </link>
+
+<!--
+    BACK RIGHT WHEEL LINK AND JOINT
+-->
+
+  <link name="wheel_br">
+    <visual>
+      <geometry>
+        <cylinder length="0.075" radius="0.125"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.075" radius="0.125"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_to_wheel_br" type="continuous">
+    <axis xyz="0 0 1"/>
+    <origin rpy="1.5708 3.14159 0" xyz="0.3 0.2375 -0.1"/>
+    <parent link="base_link"/>
+    <child link="wheel_br"/>
+  </joint>
+
+  <!--
+      BACK LEFT WHEEL LINK AND JOINT
+  -->
+
+  <link name="wheel_bl">
+    <visual>
+      <geometry>
+        <cylinder length="0.075" radius="0.125"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.075" radius="0.125"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_to_wheel_bl" type="continuous">
+    <axis xyz="0 0 1"/>
+    <origin rpy="1.5708 3.14159 0" xyz="0.3 -0.2375 -0.1"/>
+    <parent link="base_link"/>
+    <child link="wheel_bl"/>
+  </joint>
+
+  <!--
+      FRONT CASTER LINK AND JOINT
+  -->
+
+  <link name="caster_front">
+    <visual>
+      <geometry>
+        <sphere radius="0.125"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.125"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_to_caster_front" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.25 0 -0.1"/>
+    <parent link="base_link"/>
+    <child link="caster_front"/>
+  </joint>
+
+</robot>
