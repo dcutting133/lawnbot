@@ -16,13 +16,13 @@
         <box size="0.8 0.4 0.3"/>
       </geometry>
     </collision>
-    <inertial>
+    <!--inertial>
       <mass value="45"/>
       <inertia
         ixx="2.7375"  ixy="0.0" ixz="0.0"
                       iyy="3.0" iyz="0.0"
                                 izz="0.9375"/>
-    </inertial>
+    </inertial-->
   </link>
 
 <!--
@@ -51,7 +51,7 @@
 
   <joint name="base_to_wheel_br" type="continuous">
     <axis xyz="0 0 1"/>
-    <origin rpy="1.5708 3.14159 0" xyz="0.3 0.2375 -0.1"/>
+    <origin rpy="-1.5708 -3.14159 0" xyz="0.3 0.2375 -0.1"/>
     <parent link="base_link"/>
     <child link="wheel_br"/>
   </joint>
@@ -82,7 +82,7 @@
 
   <joint name="base_to_wheel_bl" type="continuous">
     <axis xyz="0 0 1"/>
-    <origin rpy="1.5708 3.14159 0" xyz="0.3 -0.2375 -0.1"/>
+    <origin rpy="-1.5708 -3.14159 0" xyz="0.3 -0.2375 -0.1"/>
     <parent link="base_link"/>
     <child link="wheel_bl"/>
   </joint>
@@ -116,5 +116,9 @@
     <parent link="base_link"/>
     <child link="caster_front"/>
   </joint>
+
+  <!--
+      GAZEBO?
+  -->
 
 </robot>
