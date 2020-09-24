@@ -4,9 +4,8 @@ Lawnbot is a small ground based robot which has the capability of autonomously m
 
 ## Roadmap
 
-###Simulated/Virtual Features
-
- * v0.1.0 Teleop
+ * Simulated/Virtual Features
+   * v0.1.0 Teleop
    * v0.2.0 Waypoint following
    * v0.4.0 Detailed simulation using physical design
    * ???
